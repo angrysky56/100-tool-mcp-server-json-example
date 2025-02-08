@@ -1,2 +1,2 @@
-# 130-tool-mcp-server-json-example
-My last working mcp-server Claude app JSON
+# 100-tool-mcp-server-json-example
+Since setting up the servers is not usually correct in the readme's these were some of the working configs I had going, obviously you should check the repos they are from. Many had to be installed and a few extra steps etc...
