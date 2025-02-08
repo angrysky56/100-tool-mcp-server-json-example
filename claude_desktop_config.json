@@ -1,0 +1,262 @@
+{
+  "mcpServers": {
+    "sqlite": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/ai_workspace/servers/mcp-prototypes/servers/src/sqlite",
+        "run",
+        "mcp-server-sqlite",
+        "--db-path",
+        "F:/ai_workspace/Nexus-Prime/NEXUS_PRIME.db"
+      ]
+    },
+    "filesystem": {
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js",
+        "F:/ai_workspace",
+        "F:/",
+        "D:/"
+      ]
+    },
+    "github": {
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-github/dist/index.js"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your token"
+      }
+    },
+    "postgres": {
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-postgres/dist/index.js",
+        "F:/PostgreSQL"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "brave-search": {
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-brave-search/dist/index.js"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "your key"
+      }
+    },
+    "google-maps": {
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-google-maps/dist/index.js"
+      ],
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "your key"
+      }
+    },
+    "docker-mcp": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/ai_workspace/servers/official-MCP-servers/docker-mcp",
+        "run",
+        "docker-mcp"
+      ]
+    },
+    "mcp-pandoc": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/ai_workspace/servers/official-MCP-servers/mcp-pandoc",
+        "run",
+        "mcp-pandoc"
+      ]
+    },
+    "server-win-cli": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@simonb97/server-win-cli",
+        "--config",
+        "F:/ai_workspace/servers/servers_forked_for_dev/win-cli-mcp-server/config.json"
+      ]
+    },
+    "mcp-server-ds": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/ai_workspace/servers/servers_forked_for_dev/mcp-server-data-exploration",
+        "run",
+        "mcp-server-ds"
+      ]
+    },
+    "everything-search": {
+      "command": "uvx",
+      "args": ["mcp-server-everything-search"],
+      "env": {
+        "EVERYTHING_SDK_PATH": "F:/Everything-SDK/dll/Everything64.dll"
+      }
+    },
+    "chat-IRIS": {
+      "command": "node",
+      "args": [
+        "F:/ai_workspace/servers/servers_forked_for_dev/any-chat-completions-mcp/build/index.js"
+      ],
+      "env": {
+        "AI_CHAT_KEY": "null",
+        "AI_CHAT_NAME": "IRIS",
+        "AI_CHAT_MODEL": "obsidian-3b-multimodal",
+        "AI_CHAT_BASE_URL": "http://localhost:1234/v1/embeddings"
+      }
+    },
+    "chat-Anubis": {
+      "command": "node",
+      "args": [
+        "F:/ai_workspace/servers/servers_forked_for_dev/any-chat-completions-mcp/build/index.js"
+      ],
+      "env": {
+        "AI_CHAT_KEY": "null",
+        "AI_CHAT_NAME": "Anubis",
+        "AI_CHAT_MODEL": "text-embedding-granite-embedding-278m-multilingual",
+        "AI_CHAT_BASE_URL": "http://localhost:1234/v1/embeddings"
+      }
+    },
+    "chat-Archimedes": {
+      "command": "node",
+      "args": [
+        "F:/ai_workspace/servers/servers_forked_for_dev/any-chat-completions-mcp/build/index.js"
+      ],
+      "env": {
+        "AI_CHAT_KEY": "null",
+        "AI_CHAT_NAME": "Archimedes",
+        "AI_CHAT_MODEL": "granite-3.1-8b-instruct",
+        "AI_CHAT_BASE_URL": "http://localhost:1234/v1"
+      }
+    },
+    "chat-anthropic": {
+      "command": "node",
+      "args": [
+        "F:/ai_workspace/servers/servers_forked_for_dev/any-chat-completions-mcp/build/index.js"
+      ],
+      "env": {
+        "AI_CHAT_KEY": "ANTHROPIC_API_KEY",
+        "AI_CHAT_NAME": "Claude2Claude",
+        "AI_CHAT_MODEL": "claude-3-5-sonnet-20241022",
+        "AI_CHAT_BASE_URL": "https://api.anthropic.com/v1"
+      }
+    },
+    "chat-openai": {
+      "command": "node",
+      "args": [
+        "F:/ai_workspace/servers/servers_forked_for_dev/any-chat-completions-mcp/build/index.js"
+      ],
+      "env": {
+        "AI_CHAT_KEY": "OPENAI_API_KEY",
+        "AI_CHAT_NAME": "OpenAI",
+        "AI_CHAT_MODEL": "gpt-4o1-mini",
+        "AI_CHAT_BASE_URL": "https://api.openai.com/v1"
+      }
+    },
+    "MCP-wolfram-alpha": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/ai_workspace/servers/servers_forked_for_dev/MCP-wolfram-alpha",
+        "run",
+        "MCP-wolfram-alpha"
+      ],
+      "env": {
+        "WOLFRAM_API_KEY": "your key"
+      }
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-etc...",
+        "SLACK_TEAM_ID": "T-etc..."
+      }
+    },
+    "discord-raw": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/ai_workspace/servers/mcp-prototypes/mcp-discord-raw",
+        "run",
+        "discord-raw-mcp"
+      ],
+      "env": {
+        "DISCORD_TOKEN": "your token"
+      }
+    },
+    "mcp-text-editor": {
+      "command": "uvx",
+      "args": ["mcp-text-editor"]
+    },
+    "@kazuph-mcp-taskmanager": {
+      "command": "npx",
+      "args": ["@kazuph/mcp-taskmanager"]
+    },
+    "neo4j": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/GithubRepos/mcp-neo4j/servers/mcp-neo4j-cypher/src/mcp_neo4j_cypher",
+        "run",
+        "mcp-neo4j-cypher",
+        "--db-url",
+        "bolt://localhost:7687",
+        "--username",
+        "neo4j",
+        "--password",
+        "put your pw here"
+      ]
+    },
+    "community-server-llm-txt": {
+      "runtime": "node",
+      "command": "npx",
+      "args": ["@mcp-get-community/server-llm-txt"]
+    },
+    "local_dev": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/GithubRepos/mcp-local-dev/src/mcp_local_dev",
+        "run",
+        "mcp-local-dev"
+      ]
+    },
+    "mcp-rtfm": {
+      "command": "node",
+      "args": ["F:/GithubRepos/mcp-rtfm/build/index.js"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-memory"]
+    },
+    "mcp-logic": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "F:/GithubRepos/repo-development/mcp-logic/src/mcp_logic",
+        "run",
+        "mcp_logic",
+        "--prover-path",
+        "F:/Prover9-Mace4/bin-win32"
+      ]
+    },
+    "@modelcontextprotocol-server-sequential-thinking": {
+      "runtime": "node",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "mcp-solver": {
+      "command": "uv",
+      "args": ["--directory", "F:/GithubRepos/mcp-solver", "run", "mcp-solver"]
+    }
+  }
+}
