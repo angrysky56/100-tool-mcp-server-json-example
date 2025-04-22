@@ -1,0 +1,140 @@
+{
+  "mcpServers": {
+    "community-server-llm-txt": {
+      "runtime": "node",
+      "command": "npx",
+      "args": [
+        "@mcp-get-community/server-llm-txt"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "sqlite": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/home/ty/Repositories/servers/src/sqlite",
+        "run",
+        "mcp-server-sqlite",
+        "--db-path",
+        "/home/ty/Repositories/ai_workspace/algorithm_platform/data/algo.db"
+      ]
+    },
+    "docker-mcp": {
+      "command": "uvx",
+      "args": [
+        "docker-mcp"
+      ]
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "/home/ty/Repositories/DesktopCommanderMCP/dist/index.js",
+        "run",
+        "desktop-commander",
+        "--config",
+        "\"{}\""
+      ]
+    },
+    "playwright-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@executeautomation/playwright-mcp-server",
+        "--config",
+        "\"{}\""
+      ],
+      "env": {
+        "DISPLAY": ":0"
+      }
+    },
+    "chroma": {
+      "command": "uvx",
+      "args": [
+        "chroma-mcp",
+        "--client-type",
+        "persistent",
+        "--data-dir",
+        "/home/ty/Repositories/chroma-db"
+      ]
+    },
+    "mcp-code-executor": {
+      "command": "node",
+      "args": [
+        "/home/ty/Repositories/mcp_code_executor/build/index.js"
+      ],
+      "env": {
+        "CODE_STORAGE_DIR": "/home/ty/Repositories/ai_workspace/python_coding_storage/",
+        "CONDA_ENV_NAME": "mcp_code_executor_env"
+      }
+    },
+    "zonos-tts-mcp": {
+      "command": "node",
+      "args": [
+        "/home/ty/Repositories/Zonos-TTS-MCP-Linux/dist/server.js"
+      ]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "arxiv-mcp-server": {
+      "command": "uv",
+      "args": [
+          "--directory",
+          "/home/ty/Repositories/arxiv-mcp-server",
+          "run",
+          "arxiv-mcp-server",
+          "--storage-path", "/home/ty/Documents/core_bot_instruction_concepts/arxiv-papers"
+      ]
+    },
+    "neo4j": {
+      "command": "uvx",
+      "args": [
+        "mcp-neo4j-cypher",
+        "--db-url",
+        "bolt://localhost",
+        "--username",
+        "neo4j",
+        "--password",
+        "<your-db-password-goes-here>"
+      ]
+    },
+    "package-version": {
+      "command": "/home/ty/Repositories/mcp-package-version/bin/mcp-package-version"
+    },
+    "archon": {
+      "command": "/home/ty/Repositories/Archon/venv/bin/python",
+      "args": [
+        "/home/ty/Repositories/Archon/mcp/mcp_server.py"
+      ]
+    },
+    "serena": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/home/ty/Repositories/serena",
+        "serena-mcp-server"
+      ]
+    },
+    "mcp-logic": {
+      "command": "uv",
+      "args": [
+        "--directory", 
+        "/home/ty/Repositories/mcp-logic/src/mcp_logic",
+        "run", 
+        "mcp_logic", 
+        "--prover-path", 
+        "/home/ty/Repositories/mcp-logic/ladr/bin"
+      ]       
+    }      
+  } 
+}
